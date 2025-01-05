@@ -129,17 +129,48 @@
     <section id="tutorial">
         <div class="section-title">Tutorial</div>
         <div class="card">
-            <h2>WordPress auf dem Raspberry Pi</h2>
+            <h2>Website mit Visual Studio Code und GitHub Pages</h2>
             <ol>
-                <li>Installiere ein Betriebssystem wie Raspberry Pi OS auf einer MicroSD-Karte.</li>
-                <li>Verbinde den Raspberry Pi mit Strom und einem Netzwerk.</li>
-                <li>Öffne das Terminal und installiere Apache mit: <code>sudo apt install apache2</code></li>
-                <li>Installiere PHP und MySQL: <code>sudo apt install php libapache2-mod-php mysql-server</code></li>
-                <li>Erstelle eine Datenbank für WordPress mit MySQL.</li>
-                <li>Downloade und installiere WordPress: <code>wget https://wordpress.org/latest.tar.gz</code></li>
-                <li>Entpacke WordPress und verschiebe die Dateien nach <code>/var/www/html</code>.</li>
-                <li>Greife über die IP-Adresse des Raspberry Pi im Browser auf die WordPress-Installationsseite zu.</li>
-                <li>Folge den Anweisungen, um WordPress einzurichten.</li>
+                <li>Erstelle deine Website in **Visual Studio Code**:
+                    <ul>
+                        <li>Erstelle eine neue Datei `index.html` und füge den HTML-Code ein.</li>
+                        <li>Optional: Erstelle separate Dateien für CSS und JavaScript.</li>
+                    </ul>
+                </li>
+                <li>Teste die Website lokal:
+                    <ul>
+                        <li>Installiere die Erweiterung **Live Server** in Visual Studio Code.</li>
+                        <li>Öffne deine Datei mit Live Server, um die Änderungen in Echtzeit zu sehen.</li>
+                    </ul>
+                </li>
+                <li>Lade die Website auf GitHub hoch:
+                    <ul>
+                        <li>Erstelle ein neues GitHub-Repository und füge deine Dateien hinzu.</li>
+                        <li>Nutze folgende Befehle im Terminal:
+                            <pre>
+git init
+git add .
+git commit -m "Website initial commit"
+git branch -M main
+git remote add origin https://github.com/<username>/<repository>.git
+git push -u origin main
+                            </pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>Aktiviere GitHub Pages:
+                    <ul>
+                        <li>Gehe in deinem Repository zu **Settings → Pages**.</li>
+                        <li>Wähle den Branch `main` und klicke auf **Save**.</li>
+                    </ul>
+                </li>
+                <li>Öffne die Website auf dem Raspberry Pi:
+                    <ul>
+                        <li>Starte den Webbrowser auf deinem Raspberry Pi.</li>
+                        <li>Gib die GitHub Pages URL ein (z. B. `https://username.github.io/repository-name`).</li>
+                        <li>Die Website ist nun auf dem Raspberry Pi sichtbar!</li>
+                    </ul>
+                </li>
             </ol>
         </div>
     </section>
